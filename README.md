@@ -1,0 +1,12 @@
+# The Cave of Caerbannog Room Creator
+
+This adds an easy way to create maps for the game "The Cave of Caerbannog" made by the group *MIGI2* for the [TU Delft] context project 2015-2016.
+
+### The Cave of Caerbannog
+All information related to "The Cave of Caerbannog" can be found on [this repository].
+
+### About this tool
+This tool is provided as is. It is meant to be used by the development team to speed up the creation of rooms.
+
+[TU Delft]: http://tudelft.nl/
+[this repository]: https://github.com/Taeir/ContextProject-MIGI2
