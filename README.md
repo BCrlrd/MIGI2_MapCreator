@@ -1,4 +1,5 @@
-# The Cave of Caerbannog Room Creator
+# The CoC Room Creator
+[![Build Status](https://travis-ci.org/BCrlrd/MIGI2_RoomCreator.svg?branch=master)](https://travis-ci.org/BCrlrd/MIGI2_RoomCreator)
 
 This adds an easy way to create maps for the game "The Cave of Caerbannog" made by the group *MIGI2* for the [TU Delft] context project 2015-2016.
 
