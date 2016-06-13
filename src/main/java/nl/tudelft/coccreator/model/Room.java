@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Room {
-	private static final String PLACEHOLDER = "# Default placeholder comment";
+	private static final String PLACEHOLDER = "# Default placeholder comment\n";
 	@Getter private int height;
 	@Getter private int width;
 	@Getter private List<Entity> entities;
@@ -23,12 +23,21 @@ public class Room {
 	@Getter private ArrayList<String> comment;
 	@Getter private String name;
 
-    public Room(int height, int width, String name) {
+    public Room(int height, int width, Tile filler, String name) {
         this.height = height;
         this.width = width;
         this.entities = new ArrayList<>();
 		this.lights = new ArrayList<>();
         this.tiles = new Tile[width][height];
+		for (int x = 0; x < width; x++) {
+			for (int y = 0; y < height; y++) {
+				if (x == 0 || y == 0 || x == width - 1 || y == height - 1) {
+					tiles[x][y] = Tile.WALL;
+				} else {
+					tiles[x][y] = filler;
+				}
+			}
+		}
 		this.comment = new ArrayList<>();
 		this.comment.add(PLACEHOLDER);
 		this.name = width + "x" + height + "_" + name;
@@ -112,7 +121,7 @@ public class Room {
 
 	public void write() {
 		try {
-			File file = new File("output" + File.separator + this.getName());
+			File file = new File("output" + File.separator + this.getName() + ".crf");
 			FileWriter fw = new FileWriter(file);
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.write(this.toString());
