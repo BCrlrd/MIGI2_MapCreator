@@ -15,7 +15,7 @@ public class Room {
 	@Getter private int width;
 	@Getter private List<Entity> entities;
 	@Getter private Tile[][] tiles;
-	@Getter @Setter private String message;
+	@Getter @Setter private String comment;
 
 	/**
 	 * Constructor for a room.
@@ -30,6 +30,6 @@ public class Room {
         this.width = width;
         this.entities = new ArrayList<>();
         this.tiles = new Tile[width][height];
-		this.message = "# Default placeholder message";
+		this.comment = "# Default placeholder comment";
     }
 }
