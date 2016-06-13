@@ -1,4 +1,4 @@
-package nl.tudelft.coccreator;
+package nl.tudelft.coccreator.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

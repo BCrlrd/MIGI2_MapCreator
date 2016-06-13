@@ -2,8 +2,8 @@ package nl.tudelft.coccreator.model.entities;
 
 import lombok.Getter;
 import lombok.Setter;
-import nl.tudelft.coccreator.Colour;
-import nl.tudelft.coccreator.Direction;
+import nl.tudelft.coccreator.util.Colour;
+import nl.tudelft.coccreator.util.Direction;
 
 public class Door extends Entity {
 	@Getter @Setter private Colour colour;

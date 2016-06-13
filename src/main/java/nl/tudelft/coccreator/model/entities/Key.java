@@ -2,7 +2,7 @@ package nl.tudelft.coccreator.model.entities;
 
 import lombok.Getter;
 import lombok.Setter;
-import nl.tudelft.coccreator.Colour;
+import nl.tudelft.coccreator.util.Colour;
 
 public class Key extends Entity {
 	@Getter @Setter private Colour colour;

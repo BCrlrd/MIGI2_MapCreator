@@ -2,7 +2,7 @@ package nl.tudelft.coccreator.model.entities;
 
 import lombok.Getter;
 import lombok.Setter;
-import nl.tudelft.coccreator.Direction;
+import nl.tudelft.coccreator.util.Direction;
 
 public class Gate extends Entity {
 	@Getter @Setter private Direction direction;

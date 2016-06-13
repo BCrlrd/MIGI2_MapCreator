@@ -1,4 +1,4 @@
-package nl.tudelft.coccreator;
+package nl.tudelft.coccreator.model;
 
 import lombok.Getter;
 import lombok.Setter;

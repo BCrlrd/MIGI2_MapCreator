@@ -1,9 +1,11 @@
 package nl.tudelft.coccreator;
 
 import nl.tudelft.coccreator.model.PointLight;
+import nl.tudelft.coccreator.model.Room;
 import nl.tudelft.coccreator.model.Tile;
 import nl.tudelft.coccreator.model.entities.Bomb;
 import nl.tudelft.coccreator.model.entities.PlayerTrigger;
+import nl.tudelft.coccreator.util.Colour;
 
 public final class Main  {
 
