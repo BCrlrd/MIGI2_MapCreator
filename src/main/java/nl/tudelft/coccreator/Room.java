@@ -6,24 +6,32 @@ import nl.tudelft.coccreator.model.PointLight;
 import nl.tudelft.coccreator.model.Tile;
 import nl.tudelft.coccreator.model.entities.Entity;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Room {
+	private static final String PLACEHOLDER = "# Default placeholder comment";
 	@Getter private int height;
 	@Getter private int width;
 	@Getter private List<Entity> entities;
 	@Getter private List<PointLight> lights;
 	@Getter private Tile[][] tiles;
-	@Getter @Setter private String comment;
+	@Getter private ArrayList<String> comment;
+	@Getter private String name;
 
-    public Room(int height, int width) {
+    public Room(int height, int width, String name) {
         this.height = height;
         this.width = width;
         this.entities = new ArrayList<>();
 		this.lights = new ArrayList<>();
         this.tiles = new Tile[width][height];
-		this.comment = "# Default placeholder comment";
+		this.comment = new ArrayList<>();
+		this.comment.add(PLACEHOLDER);
+		this.name = width + "x" + height + "_" + name;
     }
 
 	public void setTile(int x, int y, Tile type) {
@@ -48,10 +56,27 @@ public class Room {
 		lights.remove(light);
 	}
 
+	public void setComment(String comment) {
+		this.comment.clear();
+		addComment(comment);
+	}
+
+	public void addComment(String comment) {
+		if (this.comment.size() > 0 && this.comment.get(0).equals(PLACEHOLDER)) {
+			this.comment.clear();
+		}
+		String lines[] = comment.split("\\r?\\n");
+		for (String line : lines) {
+			this.comment.add("# " + line);
+			this.comment.add("\n");
+		}
+	}
+
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(comment);
-		sb.append("\n");
+		for (String com : comment) {
+			sb.append(com);
+		}
 		sb.append(width);
 		sb.append(" ");
 		sb.append(height);
@@ -83,5 +108,17 @@ public class Room {
 		}
 		sb.setLength(sb.length() - 1);
 		return sb.toString();
+	}
+
+	public void write() {
+		try {
+			File file = new File("output" + File.separator + this.getName());
+			FileWriter fw = new FileWriter(file);
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(this.toString());
+			bw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

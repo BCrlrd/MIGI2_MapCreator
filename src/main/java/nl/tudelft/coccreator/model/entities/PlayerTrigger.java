@@ -12,7 +12,11 @@ public class PlayerTrigger extends Entity {
 		super(xCoord, yCoord, zCoord, "PlayerTrigger");
 		this.triggerDistance = triggerDistance;
 		this.cooldown = cooldown;
-		this.file = file;
+		if (file.endsWith(".class")) {
+			this.file = file;
+		} else {
+			this.file = file + ".class";
+		}
 	}
 
 	@Override
