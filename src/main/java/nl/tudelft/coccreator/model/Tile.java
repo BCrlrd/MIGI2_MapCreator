@@ -1,11 +1,8 @@
-package nl.tudelft.COCRoomCreator;
+package nl.tudelft.coccreator.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-/**
- * Enum representing possible tile types.
- */
 @AllArgsConstructor
 public enum Tile {
 	FLOOR("O"),

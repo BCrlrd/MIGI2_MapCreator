@@ -1,4 +1,4 @@
-package nl.tudelft.COCRoomCreator;
+package nl.tudelft.coccreator;
 
 /**
  * Test suit for the Main class.
