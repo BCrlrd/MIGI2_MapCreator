@@ -16,6 +16,6 @@ public abstract class Entity {
 	}
 
 	public String toString() {
-		return this.getXCoordinate() + " " + this.getYCoordinate() + " " + this.getYCoordinate() + " " + getName();
+		return this.getXCoordinate() + " " + this.getYCoordinate() + " " + this.getZCoordinate() + " " + getName();
 	}
 }
