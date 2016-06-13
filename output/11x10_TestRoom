@@ -1,0 +1,19 @@
+# This is a test room.
+# It would be extremely boring to play.
+# However, it is a good test
+# for this program.
+11 10 3 1
+O - - - - - - - - # -
+- - - - - - - - - - -
+- - - - - - - - - - -
+- - - - - - - - - - -
+- - - - - - - - - - -
+- - - - - - - - - - -
+- - - - - - - - - - -
+- - - - - - - - - - -
+- - - - - - - - - - -
+- - - - - - - - - - -
+2 3 1 Bomb
+1 5 3 PlayerTrigger 3.0 2.0 Healer.class
+2 6 4 PlayerTrigger 4.0 3.0 Healer.class
+2 3 1 PointLight 0.039215688/0.007843138/0.015686275/0.003921569 5.0
