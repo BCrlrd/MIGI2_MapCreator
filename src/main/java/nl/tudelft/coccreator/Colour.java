@@ -6,12 +6,12 @@ import lombok.Setter;
 
 @AllArgsConstructor
 public class Colour {
-	@Getter @Setter private int red;
-	@Getter @Setter private int green;
-	@Getter @Setter private int blue;
-	@Getter @Setter private int alpha;
+	@Getter @Setter private float red;
+	@Getter @Setter private float green;
+	@Getter @Setter private float blue;
+	@Getter @Setter private float alpha;
 
 	public String toString() {
-		return red + "/" + green + "/" + blue + "/" + alpha;
+		return red / 255 + "/" + green / 255 + "/" + blue / 255 + "/" + alpha / 255;
 	}
 }
