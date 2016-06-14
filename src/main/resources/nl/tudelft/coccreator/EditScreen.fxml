@@ -8,22 +8,22 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.coccreator.EditScreen">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.tudelft.coccreator.EditScreen">
    <children>
-      <ScrollPane fx:id="scrollpane" prefHeight="400.0" prefWidth="400.0" />
-      <VBox prefHeight="600.0" prefWidth="250.0">
+      <ScrollPane fx:id="scrollpane" prefHeight="1000.0" prefWidth="791.0" />
+      <VBox prefHeight="1000.0" prefWidth="412.0">
          <children>
-            <ColorPicker fx:id="picker" prefHeight="47.0" prefWidth="253.0" />
-            <ComboBox fx:id="action" prefHeight="52.0" prefWidth="253.0" promptText="Action" />
-            <ComboBox fx:id="tile" prefHeight="52.0" prefWidth="253.0" promptText="Tile Type" />
-            <ComboBox fx:id="entity" prefHeight="52.0" prefWidth="253.0" promptText="Entity" />
-            <ComboBox fx:id="direction" prefHeight="52.0" prefWidth="253.0" promptText="Direction" />
+            <ColorPicker fx:id="picker" prefHeight="47.0" prefWidth="431.0" />
+            <ComboBox fx:id="action" prefHeight="52.0" prefWidth="496.0" promptText="Action" />
+            <ComboBox fx:id="tile" prefHeight="52.0" prefWidth="753.0" promptText="Tile Type" />
+            <ComboBox fx:id="entity" prefHeight="52.0" prefWidth="661.0" promptText="Entity" />
+            <ComboBox fx:id="direction" prefHeight="52.0" prefWidth="775.0" promptText="Direction" />
             <TextField fx:id="height" alignment="CENTER" prefHeight="52.0" prefWidth="250.0" promptText="Height" />
-            <TextField fx:id="a_1" alignment="CENTER" prefHeight="52.0" prefWidth="250.0" promptText="Argument 1" />
-            <TextField fx:id="a_2" alignment="CENTER" prefHeight="52.0" prefWidth="250.0" promptText="Argument 2" />
-            <TextField fx:id="a_3" alignment="CENTER" prefHeight="52.0" prefWidth="250.0" promptText="Argument 3" />
-            <Button fx:id="place" mnemonicParsing="false" prefHeight="53.0" prefWidth="225.0" text="Place" />
-            <Button fx:id="save" mnemonicParsing="false" prefHeight="53.0" prefWidth="225.0" text="Export" />
+            <TextField fx:id="a_1" alignment="CENTER" prefHeight="52.0" prefWidth="250.0" promptText="Width/Health/TriggerDistance/Texture/Radius" />
+            <TextField fx:id="a_2" alignment="CENTER" prefHeight="52.0" prefWidth="250.0" promptText="Cooldown/Width" />
+            <TextField fx:id="a_3" alignment="CENTER" prefHeight="52.0" prefWidth="250.0" promptText="File/Height" />
+            <Button fx:id="apply" mnemonicParsing="false" prefHeight="53.0" prefWidth="713.0" text="Apply" />
+            <Button fx:id="save" mnemonicParsing="false" prefHeight="486.0" prefWidth="411.0" text="Export" />
          </children>
       </VBox>
    </children>

@@ -1,0 +1,42 @@
+# This is a room made
+# by the room creator.
+10 20 15 4
+# # # # # # # # # #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# O O O O O O O O #
+# # # # # # # # # #
+1 1 1 Bomb
+2 1 1 Carrot
+3 1 1 Crate 100.0
+4 1 1 DamagedWall
+5 1 1 Door 0.4/0.2/0.4/1.0 NORTH
+6 1 1 Gate NORTH
+7 1 1 InvisibleWall
+8 1 1 Key 0.4/0.2/0.4/1.0
+1 1 2 KillerBunny
+2 1 2 LandMine
+3 1 2 Pitfall 100.0
+4 1 2 Player
+5 1 2 PlayerTrigger 100.0 10.0 Healer.class
+6 1 2 Treasure
+7 1 2 VoidPlatform
+4 20 8 PointLight 0.4/0.2/0.4/1.0 100.0
+5 20 8 PointLight 0.4/0.2/0.4/1.0 100.0
+4 20 9 PointLight 0.4/0.2/0.4/1.0 100.0
+5 20 9 PointLight 0.4/0.2/0.4/1.0 100.0

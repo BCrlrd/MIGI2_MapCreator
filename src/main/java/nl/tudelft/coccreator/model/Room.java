@@ -136,11 +136,26 @@ public class Room {
 	}
 
 	public String getColour(int x, int z) {
+		Entity e = getEntity(x, z);
+		if (e != null) return "-fx-control-inner-background: #" + e.getColour();
+		return "-fx-control-inner-background: #fff";
+	}
+
+	public Entity getEntity(int x, int z) {
 		for (Entity e : entities) {
 			if (e.getXCoordinate() == x && e.getZCoordinate() == z) {
-				return "-fx-control-inner-background: #" + e.getColour();
+				return e;
 			}
 		}
-		return "-fx-control-inner-background: #fff";
+		return null;
+	}
+
+	public PointLight getLight(int x, int z) {
+		for (PointLight l : lights) {
+			if (l.getXCoord() == x && l.getZCoord() == z) {
+				return l;
+			}
+		}
+		return null;
 	}
 }

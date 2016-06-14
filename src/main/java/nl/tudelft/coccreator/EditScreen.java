@@ -3,13 +3,11 @@ package nl.tudelft.coccreator;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
@@ -18,10 +16,8 @@ import javafx.stage.Stage;
 import lombok.SneakyThrows;
 import nl.tudelft.coccreator.model.Room;
 import nl.tudelft.coccreator.model.Tile;
-import nl.tudelft.coccreator.model.entities.Bomb;
+import nl.tudelft.coccreator.util.Applier;
 import nl.tudelft.coccreator.util.Direction;
-
-import static java.lang.Thread.sleep;
 
 public class EditScreen {
 
@@ -46,7 +42,7 @@ public class EditScreen {
 	@FXML
 	public Button save;
 	@FXML
-	public Button place;
+	public Button apply;
 	@FXML
 	public ScrollPane scrollpane;
 
@@ -84,6 +80,33 @@ public class EditScreen {
 				} catch (Exception e) {
 					System.err.println("Well, this sure broke.");
 				}
+				refreshMap();
+			}
+		});
+
+		apply.setOnAction(new EventHandler<ActionEvent>() {
+
+			@Override
+			public void handle(ActionEvent event) {
+				int h;
+				try {
+					h = Integer.valueOf(height.getText());
+				} catch (Exception e) {
+					h = 1;
+				}
+				Applier.apply(
+						picker.getValue(),
+						(String) action.getSelectionModel().getSelectedItem(),
+						(Tile) tile.getSelectionModel().getSelectedItem(),
+						(String) entity.getSelectionModel().getSelectedItem(),
+						(Direction) direction.getSelectionModel().getSelectedItem(),
+						h,
+						a_1.getText(),
+						a_2.getText(),
+						a_3.getText(),
+						lastClicked_x,
+						lastClicked_y
+				);
 				refreshMap();
 			}
 		});
@@ -149,6 +172,9 @@ public class EditScreen {
 				tf.setEditable(false);
 				tf.setText(room.getTiles()[x][y].getRepresentation());
 				tf.setStyle(room.getColour(x, y));
+				if (room.getLight(x, y) != null) {
+					tf.setStyle("-fx-font-weight: bold");
+				}
 				int cpx = x;
 				int cpy = y;
 				tf.focusedProperty().addListener(new ChangeListener<Boolean>() {
