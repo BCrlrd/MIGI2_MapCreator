@@ -2,6 +2,7 @@ package nl.tudelft.coccreator;
 
 import javafx.geometry.Pos;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 import nl.tudelft.coccreator.model.Room;
@@ -34,6 +35,10 @@ public class StartScreen extends Application {
 				Tile.WALL
 		);
 		fillerCombobox.setPromptText("Filler");
+		TextArea inputComment = new TextArea();
+		inputComment.setPromptText("Comment");
+		inputComment.minHeight(300);
+		inputComment.minWidth(700);
 
 
 		Button btn = new Button();
@@ -48,6 +53,7 @@ public class StartScreen extends Application {
 					int height = Integer.parseInt(inputHeight.getText());
 					Tile filler = (Tile) fillerCombobox.getSelectionModel().getSelectedItem();
 					Room room = new Room(height, width, filler, name);
+					room.setComment(inputComment.getText());
 					EditScreen.start(primaryStage, room);
 				} catch (Exception e) {
 					System.err.println("Width and/or height is not a number.");
@@ -58,7 +64,7 @@ public class StartScreen extends Application {
 		btn.localToScene(350, 200);
 
 		FlowPane root = new FlowPane();
-		root.getChildren().addAll(inputName, inputWidth, inputHeight, fillerCombobox, btn);
+		root.getChildren().addAll(inputName, inputWidth, inputHeight, fillerCombobox, btn, inputComment);
 
 		Scene scene = new Scene(root, 800, 800);
 		root.setAlignment(Pos.CENTER);
