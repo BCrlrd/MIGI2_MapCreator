@@ -9,7 +9,7 @@ All information related to "The Cave of Caerbannog" can be found on [this reposi
 
 ### About this tool
 This tool is provided as is. It is meant to be used by the development team to speed up the creation of rooms. No guarantees regarding reliability can or will be made. It takes some time to get used to, but once you do, it works pretty well.
-I recommend having [this] file open while creating maps, so you know which entities require which variables.
+I recommend having [this] file open while creating maps, so you know which entities require which variables. The code for this has been hacked together over a short period of time and in no way reflects the quality standards of the development team.
 
 [TU Delft]: http://tudelft.nl/
 [this repository]: https://github.com/Taeir/ContextProject-MIGI2
