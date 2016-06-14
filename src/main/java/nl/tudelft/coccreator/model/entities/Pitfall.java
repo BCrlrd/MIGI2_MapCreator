@@ -15,4 +15,9 @@ public class Pitfall extends Entity {
 	public String toString() {
 		return super.toString() + " " + radius;
 	}
+
+	@Override
+	public String getColour() {
+		return "006600";
+	}
 }

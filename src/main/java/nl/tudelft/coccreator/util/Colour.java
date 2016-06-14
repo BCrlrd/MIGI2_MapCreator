@@ -12,6 +12,6 @@ public class Colour {
 	@Getter @Setter private float alpha;
 
 	public String toString() {
-		return red / 255 + "/" + green / 255 + "/" + blue / 255 + "/" + alpha / 255;
+		return red / 255 + "/" + green / 255 + "/" + blue / 255 + "/" + alpha / 100;
 	}
 }

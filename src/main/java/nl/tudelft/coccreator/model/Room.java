@@ -34,7 +34,11 @@ public class Room {
 				if (x == 0 || y == 0 || x == width - 1 || y == height - 1) {
 					tiles[x][y] = Tile.WALL;
 				} else {
-					tiles[x][y] = filler;
+					if (filler == null) {
+						tiles[x][y] = Tile.EMPTY;
+					} else {
+						tiles[x][y] = filler;
+					}
 				}
 			}
 		}
@@ -129,5 +133,14 @@ public class Room {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public String getColour(int x, int z) {
+		for (Entity e : entities) {
+			if (e.getXCoordinate() == x && e.getZCoordinate() == z) {
+				return "-fx-control-inner-background: #" + e.getColour();
+			}
+		}
+		return "-fx-control-inner-background: #fff";
 	}
 }

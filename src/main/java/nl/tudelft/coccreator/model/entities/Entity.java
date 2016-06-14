@@ -18,4 +18,8 @@ public abstract class Entity {
 	public String toString() {
 		return this.getXCoordinate() + " " + this.getYCoordinate() + " " + this.getZCoordinate() + " " + getName();
 	}
+
+	public String getColour() {
+		return "fff";
+	}
 }

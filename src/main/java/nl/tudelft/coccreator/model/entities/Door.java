@@ -19,4 +19,9 @@ public class Door extends Entity {
 	public String toString() {
 		return super.toString() + " " + colour.toString() + " " + direction.getRepresentation();
 	}
+
+	@Override
+	public String getColour() {
+		return "926239";
+	}
 }

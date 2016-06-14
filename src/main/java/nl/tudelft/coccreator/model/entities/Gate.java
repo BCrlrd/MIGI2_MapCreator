@@ -16,4 +16,9 @@ public class Gate extends Entity {
 	public String toString() {
 		return super.toString() + " " + direction.getRepresentation();
 	}
+
+	@Override
+	public String getColour() {
+		return "0000FF";
+	}
 }

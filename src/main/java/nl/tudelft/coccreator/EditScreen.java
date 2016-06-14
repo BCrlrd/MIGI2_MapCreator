@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 import lombok.SneakyThrows;
 import nl.tudelft.coccreator.model.Room;
 import nl.tudelft.coccreator.model.Tile;
+import nl.tudelft.coccreator.model.entities.Bomb;
 import nl.tudelft.coccreator.util.Direction;
 
 import static java.lang.Thread.sleep;
@@ -83,12 +84,12 @@ public class EditScreen {
 				} catch (Exception e) {
 					System.err.println("Well, this sure broke.");
 				}
+				refreshMap();
 			}
 		});
 
 		populate();
 		refreshMap();
-		room.setTile(0, 0, Tile.ENTRANCE);
 	}
 
 	private void populate() {
@@ -147,6 +148,7 @@ public class EditScreen {
 				tf.setAlignment(Pos.CENTER);
 				tf.setEditable(false);
 				tf.setText(room.getTiles()[x][y].getRepresentation());
+				tf.setStyle(room.getColour(x, y));
 				int cpx = x;
 				int cpy = y;
 				tf.focusedProperty().addListener(new ChangeListener<Boolean>() {

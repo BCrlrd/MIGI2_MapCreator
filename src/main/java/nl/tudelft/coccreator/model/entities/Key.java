@@ -16,4 +16,9 @@ public class Key extends Entity {
 	public String toString() {
 		return super.toString() + " " + colour.toString();
 	}
+
+	@Override
+	public String getColour() {
+		return "FF0000";
+	}
 }

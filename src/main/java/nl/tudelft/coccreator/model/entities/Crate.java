@@ -15,4 +15,9 @@ public class Crate extends Entity {
 	public String toString() {
 		return super.toString() + " " + health;
 	}
+
+	@Override
+	public String getColour() {
+		return "FFCC00";
+	}
 }

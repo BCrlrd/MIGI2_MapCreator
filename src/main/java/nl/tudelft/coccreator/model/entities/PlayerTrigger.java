@@ -23,4 +23,9 @@ public class PlayerTrigger extends Entity {
 	public String toString() {
 		return super.toString() + " " + triggerDistance + " " + cooldown + " " + file;
 	}
+
+	@Override
+	public String getColour() {
+		return "551A8B";
+	}
 }
