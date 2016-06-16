@@ -76,7 +76,6 @@ public class EditScreen {
 			public void handle(ActionEvent event) {
 				try {
 					room.write();
-					Platform.exit();
 				} catch (Exception e) {
 					System.err.println("Well, this sure broke.");
 				}
