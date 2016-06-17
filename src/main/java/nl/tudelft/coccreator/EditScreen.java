@@ -91,7 +91,7 @@ public class EditScreen {
 				try {
 					h = Integer.valueOf(height.getText());
 				} catch (Exception e) {
-					h = 1;
+					h = 0;
 				}
 				Applier.apply(
 						picker.getValue(),
