@@ -1,5 +1,5 @@
 # The Cave of Caerbannog Room Creator
-[![Coverage](http://crielaard.co.uk/other_resources/badge.svg?bc=#FF00FF)](http://www.urbandictionary.com/define.php?term=seems%20legit)
+[![Coverage](http://crielaard.co.uk/other_resources/badge.svg)](http://www.urbandictionary.com/define.php?term=seems%20legit)
 [![Build Status](https://travis-ci.org/BCrlrd/MIGI2_RoomCreator.svg?branch=master)](https://travis-ci.org/BCrlrd/MIGI2_RoomCreator)
 
 This adds an easy way to create maps for the game "The Cave of Caerbannog" made by the group *MIGI2* for the [TU Delft] context project 2015-2016.
